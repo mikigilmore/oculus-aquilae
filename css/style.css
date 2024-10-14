@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow:400,600');
+
+/* General */
+
+body {
+    color: #685F5F;
+    font-family: 'Barlow', sans-serif;
+    text-transform: lowercase;
+}
+
+header,
+footer {
+    padding: 3rem;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+nav li:last-of-type {
+    margin-right: 0;
+}
+
+a,
+.fas,
+.returntogallery,
+.thumbnail {
+    transition: all .15s ease;
+}
+
+header, h1, .mobilemenu {
+    transition: all .6s ease;
+}
+
+a:link,
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:focus,
+a:hover,
+.fas:hover,
+.returntogallery:hover,
+.thumbnail:hover {
+    opacity: .7;
+}
+
+a:not([href]) {
+    cursor: default;
+}
+
+.hamburgericon,
+.thumbnail,
+.returntogallery,
+.prevbutton,
+.nextbutton,
+.closebutton {
+    cursor: pointer;
+}
+
+h1,
+.slider ul,
+.mobilemenu h2,
+.mobilemenu,
+nav ul {
+    user-select: none;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+main p {
+    line-height: 2;
+}
+
+h2,
+h3,
+main p {
+    margin-bottom: 1rem;
+}
+
+em {
+    font-style: italic;
+}
+
+/* Font awesome */
+
+i {
+    font-size: 1.5rem;
+}
+
+/* Clearfix */
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Fix for hover not working when floated */
+
+.fixfloathover {
+    position: relative;
+    z-index: 99;
+}
+
+/* Header */
+
+header {
+    max-width: 1500px;
+    min-width: 320px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 1.15rem;
+    float: left;
+    letter-spacing: .3rem;
+    color: #A29696;
+}
+
+h1 a:hover,
+h1 a:focus {
+    opacity: 1;
+}
+
+.hamburgericon {
+    float: right;
+}
+
+nav.top {
+    float: right;
+    display: none;
+}
+
+nav.top ul {
+    display: inline-block;
+}
+
+nav.top ul:first-of-type {
+    margin-right: 3rem;
+}
+
+nav a:not([href]) {
+    font-weight: 600;
+}
+
+nav a:not([href]):hover {
+    opacity: 1;
+}
+
+/* Main - General */
+
+main {
+    max-width: 1000px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+main img {
+    max-width: 100%;
+}
+
+.about img,
+.fullsize {
+    margin-bottom: 2rem;
+}
+
+/* Main - Work */
+
+.work {
+    font-size: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/* Main - Slider */
+
+.slider {
+    display: none;
+    max-width: 1400px;
+}
+
+.fullsize {
+    width: 100%;
+    padding-bottom: 70.92%;
+    background-size: cover;
+    background-position: center;
+    clear: both;
+}
+
+.slider ul {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.slider li {
+    display: inline-block;
+}
+
+.prevbutton {
+    margin-right: 4rem;
+}
+
+.slider .closebutton {
+    float: right;
+    margin-bottom: 1rem;
+}
+
+.returntogallery {
+    display: none;
+}
+
+.slider h2,
+.slider h3 {
+    font-weight: 600;
+}
+
+/* Mobile menu */
+
+.mobilemenu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 999;
+    right: 0;
+    top: 0;
+    background-color: white;
+    overflow-x: hidden;
+}
+
+.mobilemenu .closebutton {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+
+.mobilemenu section {
+    position: relative;
+    top: 50px;
+    left: 50px;
+    width: 100%;
+}
+
+.mobilemenu h2 {
+    margin-bottom: 3rem;
+}
+
+.mobilemenu ul:first-of-type {
+    margin-bottom: 3rem;
+}
+
+.mobilemenu ul:first-of-type li {
+    margin-bottom: 1rem;
+}
+
+.mobilemenu ul:last-of-type li {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.mobilemenu a:not([href]) {
+    font-weight: 600;
+}
+
+.mobilemenu a:not([href]):hover {
+    opacity: 1;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: .5rem;
+    line-height: 1.5;
+}
+
+footer p:last-of-type {
+    margin-bottom: 0;
+}
+
+footer p a {
+    border-bottom: 1px solid;
+}
+
+nav.bottom ul {
+    margin-bottom: 1rem;
+}
+
+/* Overlay */
+
+.overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(104, 95, 95, .2);
+    z-index: 1;
+}
+
+/* Media Queries */
+
+@media all and (min-width: 375px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media all and (min-width: 650px) {
+
+    /* Have to use before with font awesome for some reason */
+    .hamburgericon:before {
+        display: none;
+    }
+
+    .mobilemenu {
+        display: none;
+    }
+
+    .overlay {
+        display: none !important;
+    }
+
+    nav.top {
+        display: block;
+    }
+
+    header {
+        padding: 4rem;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+}
+
+@media all and (min-width: 950px) {
+    header {
+        padding: 5rem;
+    }
+
+    .slider section {
+        float: left;
+    }
+
+    .slider section:first-of-type {
+        width: 60%;
+        margin-right: 2rem;
+    }
+
+    .slider section:last-of-type {
+        width: 30%;
+    }
+
+    .slider .closebutton {
+        display: none;
+    }
+
+    .returntogallery {
+        display: block;
+        text-align: center;
+    }
+}
